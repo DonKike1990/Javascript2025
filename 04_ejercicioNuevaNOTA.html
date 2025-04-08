@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+
+    button onclick="nuevaNota()">Nueva Nota</button>
+    <br>
+    <br>
+    <button onclick="totalAprobados()">Aprobados</button>
+    <br>
+    <button onclick="calcularMedia()">Nota Media</button>
+     <button  onclick="notaAlta()">Nota Mas Alta</button>
+     <button  onclick="notaBaja()">Nota Mas Baja</button>
+    <script>
+    function nuevaNota(){
+        /*
+        //se pide una nota que debe esta comprendida entre 0 y 10
+        //si no está en ese rango, se debe volver a pedir
+        let nota;
+        do{
+            nota=prompt("Introduce nueva nota😊);
+        }while(nota<0||nota>10);
+        */
+        
+        let nota=document.getElementById("nota").value;
+        //solo guardamos la nota si está comprendida entre 0 y 10
+        if(nota>=0&&nota<=10){
+            notas.push(parseInt(nota));
+        }else{
+            alert("Nota no válida!!!");
+        }
+       
+    } 
+</script>
+</body>
+</html>

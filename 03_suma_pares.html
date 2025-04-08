@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Suma de Dos Numeros</p>
+    <button onclick="sumaPares()" >Suma Pares</button>
+    <!-- se pedira dos numeros -->
+<!-- 
+Cuando se pulse ese botón, se pedirán dos números. Después, la página nos mostrará un cuadro de diálogo en el que se indique la suma de los pares, comprendidos entre ambos números  -->
+
+<script>
+
+    function sumaPares(){
+        let num1 = prompt("Ingresa el primer numero");
+        let num2= prompt( "Ingrese  el segundo numero");
+        let resultado= 0;
+        let mayor, menor;
+        
+        // debemos hacer uan preugutna antes de entrar
+        if (n1<n2){
+            mayor=n1;
+            menor=n2;
+        }else{
+            mayor=n2;
+            menor=n1;
+        }
+        
+        for(let i=menor;i<=mayor ;i++ ){
+            if (i%2==0){
+                suma=suma+i;
+        }
+            
+            }
+
+            alert("La suma es: "+suma);
+
+    }
+</script>
+</body>
+
+</html>
