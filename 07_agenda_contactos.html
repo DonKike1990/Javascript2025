@@ -36,11 +36,17 @@
  function mostrar(){
     let html= "";
     for (let n of nombres){
+        html=html+"<b>"+n+"</b><a 'onclick=borrar();'> "<img src='papelera.png' 
         html=html+<br>+n+</br> 
     }
     document.getElementById("listaNombres").innerHTML=html
  }
+ function borrar(pos){
+    //borrar el nombre  que esta  en la posicion 
+    nombres, splice(pos,1);
+ }
 
+ }
 
 </script>
 </body>
