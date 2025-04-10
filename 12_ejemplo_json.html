@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <p>Datos de un alumno: nota, edad, curso nombre</p>
+
+    Nombre: <input type="text" name="" id="nombre"> <br> <br>
+    Curso: <input type="text" name="" id="curso"> <br> <br>
+    Nota: <input type="number" id="nota"> <br> <br>
+
+    <button onclick="guardar()">Guardar</button> <br> <br>
+    <button onclick="visualizar()">Ver Datos</button>
+        <br>
+        <div id="resultado"> </div>
+        <script>
+            let jsonAlumno;
+             function guardar(){
+                //recogemos 
+                let txtNombre=document.getElementById("nombre").value;
+                let txtCurso=document.getElementById("curso").value;
+                let txtNota=document.getElementById("nota").value;
+                 jsonAlumno={"nombre":txtNombre, "curso":txtCurso,"nota":txtNota};
+             }
+
+             function visualizar(){
+                console.log(jsonAlumno);
+                // let frase="Te llamas "+jsonAlumno.nombre+" estàs en el curso "+jsonAlumno.curso+" Tu nota es: "+jsonAlumno.nota;
+                // comilla invertida
+                    let frase= `Te llamas:${jsonAlumno.nombre} estas en el curso: ${jsonAlumno.curso} y tu nota es: ${jsonAlumno.nota}`;
+
+                document.getElementById("resultado").innerHTML= frase;
+
+
+             }
+        </script>
+
+
+</body>
+</html>

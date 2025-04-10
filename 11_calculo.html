@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo</title>
+</head>
+<body>
+    <p> Hasta que numero tengo que sumar, empezando con 1, para alcancanzar el valor 1000?</p>
+
+    <button onclick="calcular()">Responder</button>
+    <br>
+    <button onclick="multiplicador()">mutliplicar</button>
+    <div id="resultado"></div>
+    <div id="sumar"></div>
+    <div id="multiplica"></div>
+
+<script>
+
+    function calcular(){
+        let suma=0;
+        let contador=1;
+        while(suma<1000){   
+            suma=suma+contador;
+        contador++
+        
+        }
+        console.log(contador)
+        console.log(suma)
+
+        // mostramos el valor del contador
+        let ob=document.getElementById("resultado");
+        ob.innerHTML="<b>" +contador+"</b>";
+
+        let k=document.getElementById("sumar");
+        k.innerHTML= "<b>"+suma+ "</b>"
+
+    
+    
+    }   
+    // cuantos numeros se necesitan para multiplicar y llegar a 1000
+
+    // function multiplicador(){
+    //     let multi= 0;
+    //     let contador=1;
+    //     while(multi<1000){
+    //         multi=multi+contador;
+    //         contador++
+    //         console.log(multi)
+    //         console.log(contador)
+
+    //         let mult=document.getElementById("multiplica");
+    //     mult.innerHTML="<b>" +multi+"</b>";
+
+    //     }
+
+    // }
+   
+</script>
+
+
+</body>
+</html>
