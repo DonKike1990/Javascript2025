@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Catálogo de productos</h1>
+    <table id="catalogo">
+
+    </table>
+    <br><br>
+    <h1>Carrito</h1>
+    <table id="carrito">
+
+    </table>
+    <script>
+        let catalogo=[
+            {producto:"pan",categoria:"Alimentación",precio:1.2},
+            {producto:"guantes",categoria:"Textil",precio:22.5},
+            {producto:"zapatos",categoria:"Textil",precio:65.0},
+            {producto:"pantalla",categoria:"Informática",precio:200},
+            {producto:"teclado",categoria:"Informática",precio:35.8},
+            {producto:"leche",categoria:"Alimentación",precio:2.0}
+        ];
+        let carrito=[];
+        document.addEventListener("DOMContentLoaded",()=>{
+            let html="<tr><th>Producto</th><th>Categoria</th><th>Precio</th><th></th></tr>";
+            catalogo.forEach((p,indice)=>{
+                html=html+`<tr><td>${p.producto}</td><td>${p.categoria}</td><td>${p.precio}</td><td><button onclick="agregar(${indice})">Agregar</button></td></tr>`;
+            });
+            document.getElementById("catalogo").innerHTML=html;
+        });
+            function agregar(indice){
+                carrito.push(catalogo[indice]);
+                dibujarCarrito()
+
+                }
+                function dibujarCarrito(){
+                    let html="<tr><th>Producto</th><th>Categoria</th><th>Precio</th><th></th></tr>";
+            carrito.forEach((p,indice)=>{
+                html=html+`<tr><td>${p.producto}</td><td>${p.categoria}</td><td>${p.precio}</td><td><button onclick="eliminar(${indice})">Eliminar</button></td></tr>`;
+            });
+            document.getElementById("carrito").innerHTML=html;
+                }
+                // usamos splice para que elimine el carrito no el catalogo
+                // el indice es el orden 
+                function eliminar(indice){
+                    carrito.splice(indice,1);
+                    dibujarCarrito();
+
+                }
+                // hacer un boton de total de carrito
+        
+    </script>
+</body>
+</html> 
