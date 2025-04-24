@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combo de Ciudades</title>
+</head>
+<body>
+    <select id="ciudades">
+        <option value="10">Caceres</option>
+        <option value="20">Madrid</option>
+        <option value="30">Valencia</option>
+        <option value="40">Segovia</option>
+    </select>
+    <br>
+    <button onclick="ver()">Ver Seleccionado</button>
+
+<script>
+    function ver(){
+        let valor=document.getElementById("ciudades").value;
+        console.log(valor);
+    }
+
+</script>
+    
+</body>
+</html>

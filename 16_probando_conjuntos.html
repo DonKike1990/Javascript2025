@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conjuntos</title>
+</head>
+<body>
+    <button onclick="guardar()" >Guardar</button> <input type="text" name="nombre" id="nombre"><br>
+    <button onclick="mostrar()">Mostrar</button>
+    <button onclick="crearDesdeArray()">Desde Array</button>
+
+
+    <script>
+        let nombres= new Set();
+
+            // crear see
+        function crearDesdeArray(){
+            let existentes=["c1", "c2","c3","c2", "c4","c3"]
+            let otro= new Set(existentes);
+            console.log(otro);
+        }
+
+        function guardar(){
+            let d=document.getElementById("nombre").value
+            // HAS ES UN METODO
+            if(nombres.has(d)==true){
+                alert("Ese nombre ya existe!");
+            }else{
+                nombres.add(d)
+            }
+            nombres.add(d);
+
+        }
+        // recorremos el conjunto
+        function mostrar(){
+            for (let n of nombres){
+                console.log(n)
+            }
+        }
+
+        // volcar un conjunto en un array
+        let nuevoArray=[...nombres];
+
+         console.log(nuevoArray);
+    </script>
+
+</body>
+</html>
